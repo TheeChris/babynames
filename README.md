@@ -6,93 +6,7 @@ This is just a playful analysis of my kids' names using data from the Social Sec
 
 We will use a few libraries for reading data (io, zipfile, urllib), data manipulation (pandas, numpy), and visualization (matplotlib, plotly).
 
-We will be pulling in data from the [SSA's baby names dataset](https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data). This is a zip file containing data on names, birth counts, and sex broken down into individual files for each year. We will extract the files and append them to a dataframe for easy manipulation. Here is a random sample of the dataframe.
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>4627</th>
-      <td>1935</td>
-      <td>Madell</td>
-      <td>F</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>9682</th>
-      <td>2002</td>
-      <td>Dhamar</td>
-      <td>F</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>3920</th>
-      <td>1971</td>
-      <td>Starlet</td>
-      <td>F</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>1053</th>
-      <td>1885</td>
-      <td>Arlena</td>
-      <td>F</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>14155</th>
-      <td>2004</td>
-      <td>Zharick</td>
-      <td>F</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>3021</th>
-      <td>1920</td>
-      <td>Macil</td>
-      <td>F</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>6260</th>
-      <td>1953</td>
-      <td>Min</td>
-      <td>F</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>8378</th>
-      <td>1939</td>
-      <td>Ronell</td>
-      <td>M</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>27398</th>
-      <td>2001</td>
-      <td>Cashawn</td>
-      <td>M</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>22416</th>
-      <td>2015</td>
-      <td>Syler</td>
-      <td>M</td>
-      <td>34</td>
-    </tr>
-  </tbody>
-</table>
-
-
+We will be pulling in data from the [SSA's baby names dataset](https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-level-data). This is a zip file containing data on names, birth counts, and sex broken down into individual files for each year. We will extract the files and append them to a dataframe for easy manipulation. 
 
 ## 2.0 The Popularity of Maya
 
@@ -123,7 +37,7 @@ Maya was ranked 73rd in 2014 birth names. Although none of the top five accounte
 
 ## 2.1 The Age of Henry
 
-Now to figure out the average age of Henrys. First, we need to pull in data from the [SSA's Actuarial Life Tables](https://www.ssa.gov/oact/STATS/table4c6.html). You can see the head of the table and definitions of features below.
+Now to figure out the average age of Henrys. First, we need to pull in data from the [SSA's Actuarial Life Tables](https://www.ssa.gov/oact/STATS/table4c6.html)  (I used the 2018 data [found here](https://www.ssa.gov/oact/HistEst/PerLifeTables/2018/PerLifeTables2018.html)). You can see the head of the table and definitions of features below.
 
 <table border="1" class="dataframe">
   <thead>
